@@ -18,7 +18,8 @@ export default class Lyrics extends Component {
             .get(
                 `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${
                     this.props.match.params.id
-                }&apikey=${process.env.REACT_APP_MM_KEY}`
+                }&apikey=${process.env.REACT_APP_MM_KEY ||
+                    "a4b487225e425f0923e2ee4a15574bb3"}`
             )
             .then(res => {
                 this.setState({ lyrics: res.data.message.body.lyrics });
@@ -27,7 +28,8 @@ export default class Lyrics extends Component {
                 return axios.get(
                     `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.get?track_id=${
                         this.props.match.params.id
-                    }&apikey=${process.env.REACT_APP_MM_KEY}`
+                    }&apikey=${process.env.REACT_APP_MM_KEY ||
+                        "a4b487225e425f0923e2ee4a15574bb3"}`
                 );
             })
             .then(res => {
@@ -60,7 +62,12 @@ export default class Lyrics extends Component {
                             </span>
                         </h5>
                         <div className="card-body">
-                            <p className="card-text">{lyrics.lyrics_body.split("***").reverse().pop()}</p>
+                            <p className="card-text">
+                                {lyrics.lyrics_body
+                                    .split("***")
+                                    .reverse()
+                                    .pop()}
+                            </p>
                         </div>
                     </div>
                     <ul className="list-group mt-3">

@@ -31,9 +31,9 @@ export class Provider extends Component {
     componentDidMount() {
         axios
             .get(
-                `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page=1&page_size=10&country=us&f_has_lyrics=1&apikey=${
-                    process.env.REACT_APP_MM_KEY
-                }`
+                `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page=1&page_size=10&country=us&f_has_lyrics=1&apikey=${process
+                    .env.REACT_APP_MM_KEY ||
+                    "a4b487225e425f0923e2ee4a15574bb3"}`
             )
             .then(res => {
                 // console.log(res.data);
