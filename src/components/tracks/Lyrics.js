@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Spinner from "../layout/Spinner";
-import Moment from "react-moment";
 
 export default class Lyrics extends Component {
     constructor(props) {
@@ -40,7 +39,7 @@ export default class Lyrics extends Component {
 
     render() {
         const { track, lyrics } = this.state;
-        // console.log(track);
+        console.log(track);
         if (
             track === "undefined" ||
             lyrics === "undefined" ||
@@ -72,11 +71,18 @@ export default class Lyrics extends Component {
                     </div>
                     <ul className="list-group mt-3">
                         <li className="list-group-item">
+                            <strong>Artist Name</strong>: {track.artist_name}
+                        </li>
+                        <li className="list-group-item">
+                            <strong>Album Name</strong>: {track.album_name}
+                        </li>
+                        <li className="list-group-item">
                             <strong>Album ID</strong>: {track.album_id}
                         </li>
                         <li className="list-group-item">
                             <strong>Genre</strong>:{" "}
-                            {track.primary_genres === "undefined"
+                            {track.primary_genres !== "undefined" &&
+                            track.primary_genres.music_genre_list.length !== 0
                                 ? track.primary_genres.music_genre_list[0]
                                       .music_genre.music_genre_name
                                 : "None"}
@@ -86,10 +92,8 @@ export default class Lyrics extends Component {
                             {track.explicit === 0 ? "No" : "Yes"}
                         </li>
                         <li className="list-group-item">
-                            <strong>Release Date</strong>:{" "}
-                            <Moment format="DD/MM/YYYY">
-                                {track.updated_time}
-                            </Moment>
+                            <strong>Instrumental</strong>:{" "}
+                            {track.instrumental === 0 ? "No" : "Yes"}
                         </li>
                     </ul>
                 </React.Fragment>
