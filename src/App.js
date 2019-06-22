@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, HashRouter } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Index from "./components/layout/Index";
 import { Provider } from "./context";
@@ -9,7 +9,7 @@ import Lyrics from "./components/tracks/Lyrics";
 function App() {
     return (
         <Provider>
-            <Router>
+            <HashRouter>
                 <React.Fragment>
                     <Navbar />
                     <div className="container">
@@ -23,7 +23,7 @@ function App() {
                         </Switch>
                     </div>
                 </React.Fragment>
-            </Router>
+            </HashRouter>
         </Provider>
     );
 }
