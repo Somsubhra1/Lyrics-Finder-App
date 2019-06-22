@@ -60,7 +60,7 @@ export default class Lyrics extends Component {
                             </span>
                         </h5>
                         <div className="card-body">
-                            <p className="card-text">{lyrics.lyrics_body}</p>
+                            <p className="card-text">{lyrics.lyrics_body.split("***").reverse().pop()}</p>
                         </div>
                     </div>
                     <ul className="list-group mt-3">

@@ -3,13 +3,29 @@ import axios from "axios";
 
 export const Context = createContext();
 
+// Reducer function
+const reducer = (state, action) => {
+    switch (action.type) {
+        case "SEARCH_TRACKS":
+            return {
+                ...state,
+                track_list: action.payload, // updating the track_list with api response from the search component
+                heading: "Search Results"
+            };
+
+        default:
+            return state;
+    }
+};
+
 export class Provider extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
             track_list: [],
-            heading: "Top 10 tracks"
+            heading: "Top 10 tracks",
+            dispatch: action => this.setState(state => reducer(state, action)) // reducer to update the context state from any other component
         };
     }
     componentDidMount() {
