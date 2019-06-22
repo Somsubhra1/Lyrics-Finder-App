@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Lyrics-Finder-App/static/css/main.1fa3f329.chunk.css",
-    "main.js": "/Lyrics-Finder-App/static/js/main.bcdbab7a.chunk.js",
-    "main.js.map": "/Lyrics-Finder-App/static/js/main.bcdbab7a.chunk.js.map",
+    "main.js": "/Lyrics-Finder-App/static/js/main.13c5a12c.chunk.js",
+    "main.js.map": "/Lyrics-Finder-App/static/js/main.13c5a12c.chunk.js.map",
     "runtime~main.js": "/Lyrics-Finder-App/static/js/runtime~main.453e19ca.js",
     "runtime~main.js.map": "/Lyrics-Finder-App/static/js/runtime~main.453e19ca.js.map",
-    "static/js/2.bd45e88c.chunk.js": "/Lyrics-Finder-App/static/js/2.bd45e88c.chunk.js",
-    "static/js/2.bd45e88c.chunk.js.map": "/Lyrics-Finder-App/static/js/2.bd45e88c.chunk.js.map",
+    "static/js/2.e29790d1.chunk.js": "/Lyrics-Finder-App/static/js/2.e29790d1.chunk.js",
+    "static/js/2.e29790d1.chunk.js.map": "/Lyrics-Finder-App/static/js/2.e29790d1.chunk.js.map",
     "index.html": "/Lyrics-Finder-App/index.html",
-    "precache-manifest.11caeb0e75f43d02b26f6ab26128560c.js": "/Lyrics-Finder-App/precache-manifest.11caeb0e75f43d02b26f6ab26128560c.js",
+    "precache-manifest.e0f251c0b086861536a4f7ab1bfa902a.js": "/Lyrics-Finder-App/precache-manifest.e0f251c0b086861536a4f7ab1bfa902a.js",
     "service-worker.js": "/Lyrics-Finder-App/service-worker.js",
     "static/css/main.1fa3f329.chunk.css.map": "/Lyrics-Finder-App/static/css/main.1fa3f329.chunk.css.map"
   }
